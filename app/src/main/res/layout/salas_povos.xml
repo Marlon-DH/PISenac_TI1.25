@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <!-- BARRA SUPERIOR DE FUNDO -->
+    <View
+        android:id="@+id/view2"
+        android:layout_width="0dp"
+        android:layout_height="120dp"
+        android:background="#045404"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- LOGO DO MUSEU -->
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="160dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="24dp"
+        android:background="#078907"
+        android:contentDescription="Logo do Museu"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="@+id/view2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/view2"
+        app:srcCompat="@drawable/logo_museu_preto" />
+
+    <!-- CONTAINER DO TÍTULO -->
+    <View
+        android:id="@+id/view5"
+        android:layout_width="0dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:background="#078907"
+        app:layout_constraintBottom_toBottomOf="@+id/view2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageView"
+        app:layout_constraintTop_toTopOf="@+id/view2" />
+
+    <!-- TÍTULO PRINCIPAL (Ajustado para SP e tamanho legível em Tablets) -->
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sala Dos Povos"
+        android:textColor="@color/black"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/view5"
+        app:layout_constraintEnd_toEndOf="@+id/view5"
+        app:layout_constraintStart_toStartOf="@+id/view5"
+        app:layout_constraintTop_toTopOf="@+id/view5" />
+    <android.view.TextureView
+        android:id="@+id/videoViewMuseu"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/view"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view2" />
+
+    <!-- ==================== ÁREA DE CONTEÚDO CENTRAL ==================== -->
+    <!-- Insira aqui o conteúdo principal (Textos, Imagens, Rolagem) -->
+    <!-- =================================================================== -->
+
+    <!-- BARRA INFERIOR DE FUNDO -->
+    <View
+        android:id="@+id/view"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        android:background="#045404"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!-- BOTÕES INFERIORES DISTRIBUÍDOS AUTOMATICAMENTE (Chain: spread) -->
+    <ImageButton
+        android:id="@+id/imageButton4"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:background="?android:attr/selectableItemBackgroundBorderless"
+        android:contentDescription="Idioma: Brasil"
+        android:scaleType="fitCenter"
+        app:srcCompat="@drawable/brasil"
+        app:layout_constraintTop_toTopOf="@+id/view"
+        app:layout_constraintBottom_toBottomOf="@+id/view"
+        app:layout_constraintStart_toStartOf="@+id/view"
+        app:layout_constraintEnd_toStartOf="@+id/imageButton5"
+        app:layout_constraintHorizontal_chainStyle="spread" />
+
+    <ImageButton
+        android:id="@+id/imageButton5"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:background="?android:attr/selectableItemBackgroundBorderless"
+        android:contentDescription="Idioma: Espanha"
+        android:scaleType="fitCenter"
+        app:srcCompat="@drawable/espanha"
+        app:layout_constraintTop_toTopOf="@+id/view"
+        app:layout_constraintBottom_toBottomOf="@+id/view"
+        app:layout_constraintStart_toEndOf="@+id/imageButton4"
+        app:layout_constraintEnd_toStartOf="@+id/imageButton6" />
+
+    <ImageButton
+        android:id="@+id/imageButton6"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:background="?android:attr/selectableItemBackgroundBorderless"
+        android:contentDescription="Idioma: EUA"
+        android:scaleType="fitCenter"
+        app:srcCompat="@drawable/eua"
+        app:layout_constraintTop_toTopOf="@+id/view"
+        app:layout_constraintBottom_toBottomOf="@+id/view"
+        app:layout_constraintStart_toEndOf="@+id/imageButton5"
+        app:layout_constraintEnd_toStartOf="@+id/imageButton7" />
+
+    <ImageButton
+        android:id="@+id/imageButton7"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:background="?android:attr/selectableItemBackgroundBorderless"
+        android:contentDescription="Idioma: It&#225;lia"
+        android:scaleType="fitCenter"
+        app:srcCompat="@drawable/italia"
+        app:layout_constraintTop_toTopOf="@+id/view"
+        app:layout_constraintBottom_toBottomOf="@+id/view"
+        app:layout_constraintStart_toEndOf="@+id/imageButton6"
+        app:layout_constraintEnd_toStartOf="@+id/imageButton8" />
+
+    <ImageButton
+        android:id="@+id/imageButton8"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:background="?android:attr/selectableItemBackgroundBorderless"
+        android:contentDescription="Op&#231;&#227;o: &#193;udio Descri&#231;&#227;o"
+        android:scaleType="fitCenter"
+        app:srcCompat="@drawable/audio_descricao"
+        app:layout_constraintTop_toTopOf="@+id/view"
+        app:layout_constraintBottom_toBottomOf="@+id/view"
+        app:layout_constraintStart_toEndOf="@+id/imageButton7"
+        app:layout_constraintEnd_toStartOf="@+id/imageButton9" />
+
+    <ImageButton
+        android:id="@+id/imageButton9"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:background="?android:attr/selectableItemBackgroundBorderless"
+        android:contentDescription="Op&#231;&#227;o: Libras"
+        android:scaleType="fitCenter"
+        app:srcCompat="@drawable/libras"
+        app:layout_constraintTop_toTopOf="@+id/view"
+        app:layout_constraintBottom_toBottomOf="@+id/view"
+        app:layout_constraintStart_toEndOf="@+id/imageButton8"
+        app:layout_constraintEnd_toEndOf="@+id/view" />
+
+    <!-- BOTÃO PARA SAIR DA TELA CHEIA -->
+    <ImageButton
+        android:id="@+id/btnSair"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="?android:attr/selectableItemBackgroundBorderless"
+        android:contentDescription="Sair"
+        android:scaleType="fitCenter"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/x" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="59dp"
+        android:layout_height="72dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/videoViewMuseu"
+        app:layout_constraintHorizontal_bias="0.042"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.021"
+        app:srcCompat="@drawable/brasil" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
